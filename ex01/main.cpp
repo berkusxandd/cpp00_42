@@ -4,12 +4,21 @@
 
 int	main()
 {
-	int exit;
 	std::string line;
-	exit = 0;
-	system("clear");
 	PhoneBook phonebook;
-	phonebook.add_contact();
+
 	system("clear");
-	phonebook.search_contact();
+	while (1)
+	{
+		std::cout << "type a command (ADD SEARCH EXIT)\n>";
+		getline(std::cin,line);
+		system("clear");
+		if (!line.compare("EXIT"))
+			break;
+		if (!line.compare("ADD"))
+			phonebook.add_contact();
+		if (!line.compare("SEARCH"))
+			phonebook.search_contact();
+	}
+	return 0;
 }
