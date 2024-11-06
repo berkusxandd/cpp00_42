@@ -62,26 +62,51 @@ void PhoneBook::add_contact()
 
 	std::cout << "type the first name of the contact \n>";
 	getline(std::cin,line);
+	if (!line[0])
+	{
+		std::cout << "information cannot be empty. aborted...\n";
+		return ;
+	}
 	contact.setName(line);
 	system("clear");
 
 	std::cout << "type the last name of the contact \n>";
 	getline(std::cin,line);
+	if (!line[0])
+	{
+		std::cout << "information cannot be empty. aborted...\n";
+		return ;
+	}
 	contact.setLastName(line);
 	system("clear");
 
 	std::cout << "type the nickname of the contact \n>";
 	getline(std::cin,line);
+	if (!line[0])
+	{
+		std::cout << "information cannot be empty. aborted...\n";
+		return ;
+	}
 	contact.setNickname(line);
 	system("clear");
 
 	std::cout << "type the phone number of the contact \n>";
 	getline(std::cin,line);
+	if (!line[0])
+	{
+		std::cout << "information cannot be empty. aborted...\n";
+		return ;
+	}
 	contact.setNumber(line);
 	system("clear");
 
 	std::cout << "type a secret of the contact \n>";
 	getline(std::cin,line);
+	if (!line[0])
+	{
+		std::cout << "information cannot be empty. aborted...\n";
+		return ;
+	}
 	contact.setSecret(line);
 	system("clear");
 
