@@ -1,15 +1,26 @@
 NAME = gbu
 SRCS = tests.cpp Account.cpp
+OBJS = $(SRCS:.cpp=.o)
+OBJDIR = ./objs
+OBJ_PATHS = $(addprefix $(OBJDIR)/, $(OBJS))
 CC = c++
-FLAGS = -std=c++98
+FLAGS = -Wall -Werror -Wextra -std=c++98
 
 all : $(NAME)
 
-$(NAME): $(SRCS)
-		 $(CC) $(FLAGS) $(SRCS) -o $(NAME)
+$(NAME): $(OBJ_PATHS)
+	$(CC) $(FLAGS) $(OBJ_PATHS) -o $(NAME)
+
+$(OBJDIR)/%.o: %.cpp | $(OBJDIR)
+	$(CC) $(FLAGS) -c $< -o $@
+
+$(OBJDIR):
+	mkdir -p $(OBJDIR)
+
 clean:
-	rm -rf $(NAME)
+	rm -rf $(OBJDIR)
 
 fclean: clean
+	rm -rf $(NAME)
 
 re: fclean all
