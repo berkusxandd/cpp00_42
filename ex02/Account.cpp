@@ -6,7 +6,7 @@
 /*   By: bince < bince@student.42.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 14:46:16 by bince             #+#    #+#             */
-/*   Updated: 2024/11/08 14:46:16 by bince            ###   ########.fr       */
+/*   Updated: 2024/11/11 18:09:47 by bince            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ void Account::displayAccountsInfos()
 	std::cout << "accounts:" << Account::_nbAccounts <<";";
 	std::cout << "total:" << Account::_totalAmount <<";";
 	std::cout << "deposit:" << Account::_totalNbDeposits <<";";
-	std::cout << "accounts:" << Account::_totalNbWithdrawals <<";" << std::endl;
+	std::cout << "withdrawals:" << Account::_totalNbWithdrawals <<";" << std::endl;
 }
 
 void Account::displayStatus() const

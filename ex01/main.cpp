@@ -11,7 +11,11 @@ int	main()
 	while (1)
 	{
 		std::cout << "type a command (ADD SEARCH EXIT)\n>";
-		getline(std::cin,line);
+		if (!getline(std::cin,line) || line.empty())
+		{
+			std::cout << "input cannot be null." << std::endl;
+			return 1;
+		}
 		system("clear");
 		if (!line.compare("EXIT"))
 			break;

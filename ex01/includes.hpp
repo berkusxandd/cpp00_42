@@ -6,12 +6,12 @@
 /*   By: bince < bince@student.42.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 14:45:55 by bince             #+#    #+#             */
-/*   Updated: 2024/11/08 14:45:55 by bince            ###   ########.fr       */
+/*   Updated: 2024/11/11 17:33:16 by bince            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef INCLUDES_H
-#define INCLUDES_H
+#ifndef INCLUDES_HPP
+#define INCLUDES_HPP
 
 #include <cstdlib>
 #include <iostream>
